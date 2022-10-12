@@ -17,7 +17,14 @@ class Shelter
     def call_pets
         @pets.each do |pet|
             pet << "!"
+            # This permanantly modifies @pets
         end
     end
+
+    def over_capacity?
+        if @pets.length <= @capacity
+            false
+        else
+            true
 
 end
